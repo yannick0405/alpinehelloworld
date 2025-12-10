@@ -1,8 +1,8 @@
 pipeline {
     agent none
     environment {
-        DOCKERHUB_AUTH = credentials('DOCKERHUB_AUTH')
-        ID_DOCKER = "${DOCKERHUB_AUTH_USR}"  
+        ID_DOCKER_PARAMS = credentials('ID_DOCKER_PARAMS')
+        ID_DOCKER = "${ID_DOCKER_PARAMS}"  
         PORT_EXPOSED = "80"
     }
     stages {
