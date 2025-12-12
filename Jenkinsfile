@@ -7,7 +7,7 @@ pipeline {
         PORT_EXPOSED = "80"
         IMAGE_NAME = "alpinehelloworld"
         IMAGE_TAG = "latest" 
-        DOCKER_USERNAME = 'yannick0405' 
+        DOCKER_USERNAME = 'yannick0405'  
     }
     stages { 
       stage ('Build image'){
