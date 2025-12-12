@@ -9,7 +9,7 @@ pipeline {
         IMAGE_TAG = "latest"
         DOCKER_USERNAME = 'yannick0405'
     }
-    stages {
+    stages { 
       stage ('Build image'){
           agent any
           steps {
