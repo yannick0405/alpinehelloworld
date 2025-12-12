@@ -1,14 +1,13 @@
-/* import shared library */
-@Library('shared-library')_
+
 pipeline {
     agent none
     environment {
         DOCKERHUB_AUTH = credentials('blondel')
         ID_DOCKER = "${DOCKERHUB_AUTH_USR}"
         PORT_EXPOSED = "80"
-        IMAGE_NAME = "alpinebootcamp28"
-        IMAGE_TAG = "v1.1"
-        DOCKER_USERNAME = 'blondel'
+        IMAGE_NAME = "alpinehelloworld"
+        IMAGE_TAG = "latest"
+        DOCKER_USERNAME = 'yannick0405'
     }
     stages {
       stage ('Build image'){
@@ -99,11 +98,4 @@ pipeline {
           }
       }        
     }
-    post {
-        always {
-            script {
-                slackNotifier currentBuild.result
-            }
-        }
-    }
-}
+  
