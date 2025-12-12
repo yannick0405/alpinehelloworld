@@ -6,7 +6,7 @@ pipeline {
         ID_DOCKER = "${DOCKERHUB_AUTH_USR}"
         PORT_EXPOSED = "80"
         IMAGE_NAME = "alpinehelloworld"
-        IMAGE_TAG = "latest"
+        IMAGE_TAG = "latest" 
         DOCKER_USERNAME = 'yannick0405'
     }
     stages { 
